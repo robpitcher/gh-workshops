@@ -1,0 +1,14 @@
+{
+  "name": "slidev-theme-github",
+  "version": "0.0.0",
+  "private": true,
+  "description": "GitHub workshop theme, reverse-engineered from the built decks in this repo",
+  "keywords": ["slidev-theme", "slidev"],
+  "engines": {
+    "slidev": ">=52.0.0"
+  },
+  "slidev": {
+    "colorSchema": "dark",
+    "highlighter": "shiki"
+  }
+}
