@@ -7,7 +7,7 @@ Static site for enterprise GitHub/Copilot workshops (Astro shell + Slidev decks)
 - Never delete `.nojekyll`: without it GitHub Pages hides `_astro/` and the whole site loses its CSS/JS.
 - All internal URLs are absolute and start with `/gh-workshops/`. Keep that prefix in every link, asset path and Slidev `--base`.
 - Don't edit existing workshops' generated files unless asked. `_astro/` is shared by every page, and `*/slides/assets/` are content-hashed bundles referenced by name; don't rename them, and never run formatters on minified output.
-- Upstream deploys can overwrite anything here (including this file, `README.md` and the landing `index.html`). Warn the user when a change would be lost on the next upstream sync.
+- Syncing the fork updates only the default `gh-pages` branch; the site is published from `robpitcher`, which upstream never touches directly. Upstream changes reach `robpitcher` only when `gh-pages` is merged into it, and that merge can conflict on files both sides changed (including this file, `README.md` and the landing `index.html`). Warn the user when a change would conflict with upstream on that merge.
 - A new workshop must match the existing ones: same folder layout, page shell, CSS and landing-page card. Copy structure from the closest existing workshop rather than inventing new markup or styles.
 - Decks use `theme: ../../themes/github`. Its source in `src/themes/github/` was rebuilt from the compiled decks to match them exactly; read its `README.md` for the layouts, headmatter and `gh-*` classes before writing slides. Keep it matching the existing decks; don't restyle it.
 
