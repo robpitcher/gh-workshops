@@ -21,6 +21,7 @@ branch**, select **robpitcher**, and select **/ (root)**. This is a repository
 setting, not a workflow file; changes must reach `robpitcher` to be published.
 Keep `.nojekyll` and the `/gh-workshops/` URL prefix intact.
 
-Upstream deploys can overwrite tracked files, including these instructions,
-skills, and this README. Preserve or reapply fork-specific changes when syncing
-upstream.
+Syncing the fork updates only the default `gh-pages` branch, not `robpitcher`.
+When merging `gh-pages` into `robpitcher` to pick up upstream workshops, upstream
+deploy commits may conflict with fork-specific files such as these instructions,
+skills, and this README; resolve in favor of the fork's versions.
